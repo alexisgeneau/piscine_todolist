@@ -63,16 +63,16 @@ Exemple de mini-router
 Le fichier router.php contient une logique simple pour gérer les routes :
 
 ```php
-switch ($_SERVER['REQUEST_URI']) {
-case '/':
-require 'index.php';
-break;
-case '/task/add':
-require '../src/Controller.php';
-break;
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+switch ($uri) {
+    case '/':
+        Controller::index();
+        break;
 default:
-http_response_code(404);
-echo "Page non trouvée.";
+        http_response_code(404);
+        echo "Page non trouvée.";
+        break;
 }
 ```
 
