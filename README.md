@@ -76,7 +76,10 @@ default:
 }
 ```
 
-Améliorations possibles
-Ajouter une barre de recherche pour filtrer les tâches.
-Implémenter un système de pagination si le fichier JSON devient volumineux.
-Ajouter une validation plus robuste pour les entrées utilisateur.
+Améliorations possibles : 
+- Ajouter une barre de recherche pour filtrer les tâches.
+- Implémenter un système de pagination si le fichier JSON devient volumineux.
+- Ajouter une validation plus robuste pour les entrées utilisateur.
+- Ajouter un systeme de connexion avec un une notion de tache privée et publique.
+- Remplacer le stockage JSON par une base de données SQL.
+
